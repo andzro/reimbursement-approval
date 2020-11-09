@@ -14,12 +14,13 @@ public class ReimbursementApprovalMain {
         request.setEmployeeId(Long.parseLong(args[1]));
         request.setReimbursementId(Long.parseLong(args[2]));
 
-        String username = args[3];
+        String approver = args[3];
 
         if ("approve".equals(args[0])) {
-            reimbursementApprovalService.approve(request, username);
+            reimbursementApprovalService.approveWithApprover(request, approver);
         } else if ("disapprove".equals(args[0])) {
-            reimbursementApprovalService.disapprove(request);
+            String reason = args[4];
+            reimbursementApprovalService.disapproveWithReason(request, approver, reason);
         } else {
             System.out.println("Usage: approve/disapprove <employeeID> <reimbursementID>");
         }

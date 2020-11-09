@@ -5,7 +5,8 @@ public class ReimbursementApproval {
     private long reimbursementId;
     private long employeeId;
     private boolean approved;
-    private String username;
+    private String approver;
+    private String reason;
 
     public ReimbursementApproval() {
     }
@@ -16,11 +17,19 @@ public class ReimbursementApproval {
         this.approved = approved;
     }
 
-    public ReimbursementApproval(long reimbursementId, long employeeId, boolean approved, String username) {
+    public ReimbursementApproval(long reimbursementId, long employeeId, boolean approved, String approver) {
         this.reimbursementId = reimbursementId;
         this.employeeId = employeeId;
         this.approved = approved;
-        this.username = username;
+        this.approver = approver;
+    }
+
+    public ReimbursementApproval(long reimbursementId, long employeeId, boolean approved, String approver, String reason) {
+        this.reimbursementId = reimbursementId;
+        this.employeeId = employeeId;
+        this.approved = approved;
+        this.approver = approver;
+        this.reason = reason;
     }
 
     public long getReimbursementId() {
@@ -45,6 +54,14 @@ public class ReimbursementApproval {
 
     public void setApproved(boolean approved) {
         this.approved = approved;
+    }
+
+    public String getApprover() {
+        return approver;
+    }
+
+    public String getReason() {
+        return reason;
     }
 
     @Override

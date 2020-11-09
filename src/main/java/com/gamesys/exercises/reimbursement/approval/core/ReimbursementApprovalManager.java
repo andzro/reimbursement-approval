@@ -4,5 +4,7 @@ public interface ReimbursementApprovalManager {
 
     void saveReimbursementApproval(ReimbursementApproval reimbursementApproval);
 
-    void saveReimbursementApproval(ReimbursementApproval reimbursementApproval, String username);
+    void saveReimbursementApproval(ReimbursementApproval reimbursementApproval, String approver);
+
+    void saveReimbursementApproval(ReimbursementApproval reimbursementApproval, String approver, String reason);
 }

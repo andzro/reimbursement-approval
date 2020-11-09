@@ -11,10 +11,17 @@ public class ReimbursementApprovalManagerImpl implements ReimbursementApprovalMa
         System.out.println("=== End - Saved Approval ===");
     }
 
-    public void saveReimbursementApproval(ReimbursementApproval reimbursementApproval, String username) {
+    public void saveReimbursementApproval(ReimbursementApproval reimbursementApproval, String approver) {
         System.out.println("=== Saved Approval ===");
         System.out.println(reimbursementApproval);
-        System.out.println(username);
+        System.out.println("Approver="+ approver);
+        System.out.println("=== End - Saved Approval ===");
+    }
+
+    public void saveReimbursementApproval(ReimbursementApproval reimbursementApproval, String approver, String reason) {
+        System.out.println("=== Saved Approval ===");
+        System.out.println(reimbursementApproval);
+        System.out.println("Reason="+ reason);
         System.out.println("=== End - Saved Approval ===");
     }
 
