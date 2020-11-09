@@ -14,8 +14,10 @@ public class ReimbursementApprovalMain {
         request.setEmployeeId(Long.parseLong(args[1]));
         request.setReimbursementId(Long.parseLong(args[2]));
 
+        String username = args[3];
+
         if ("approve".equals(args[0])) {
-            reimbursementApprovalService.approve(request);
+            reimbursementApprovalService.approve(request, username);
         } else if ("disapprove".equals(args[0])) {
             reimbursementApprovalService.disapprove(request);
         } else {

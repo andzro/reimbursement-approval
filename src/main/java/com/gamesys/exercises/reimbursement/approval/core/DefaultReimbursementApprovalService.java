@@ -17,6 +17,12 @@ public class DefaultReimbursementApprovalService implements ReimbursementApprova
         reimbursementApprovalManager.saveReimbursementApproval(reimbursementApproval);
     }
 
+    public void approve(ReimbursementApprovalRequest request, String username) {
+        ReimbursementApproval reimbursementApproval = new ReimbursementApproval(request.getReimbursementId(),
+                request.getEmployeeId(), APPROVED);
+        reimbursementApprovalManager.saveReimbursementApproval(reimbursementApproval, username);
+    }
+
     public void disapprove(ReimbursementApprovalRequest request) {
         ReimbursementApproval reimbursementApproval = new ReimbursementApproval(request.getReimbursementId(),
                 request.getEmployeeId(), UNAPPROVED);

@@ -5,6 +5,7 @@ public class ReimbursementApproval {
     private long reimbursementId;
     private long employeeId;
     private boolean approved;
+    private String username;
 
     public ReimbursementApproval() {
     }
@@ -13,6 +14,13 @@ public class ReimbursementApproval {
         this.reimbursementId = reimbursementId;
         this.employeeId = employeeId;
         this.approved = approved;
+    }
+
+    public ReimbursementApproval(long reimbursementId, long employeeId, boolean approved, String username) {
+        this.reimbursementId = reimbursementId;
+        this.employeeId = employeeId;
+        this.approved = approved;
+        this.username = username;
     }
 
     public long getReimbursementId() {

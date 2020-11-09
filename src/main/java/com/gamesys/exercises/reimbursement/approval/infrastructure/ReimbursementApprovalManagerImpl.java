@@ -11,4 +11,11 @@ public class ReimbursementApprovalManagerImpl implements ReimbursementApprovalMa
         System.out.println("=== End - Saved Approval ===");
     }
 
+    public void saveReimbursementApproval(ReimbursementApproval reimbursementApproval, String username) {
+        System.out.println("=== Saved Approval ===");
+        System.out.println(reimbursementApproval);
+        System.out.println(username);
+        System.out.println("=== End - Saved Approval ===");
+    }
+
 }
